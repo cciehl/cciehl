@@ -1,0 +1,47 @@
+{
+  "name": "my-ai-assistant",
+  "displayName": "AI 开发助理",
+  "version": "0.0.1",
+  "publisher": "your-name",
+  "engines": { "vscode": "^1.60.0" },
+  "activationEvents": [
+    "onCommand:ai.generateTask",
+    "onCommand:ai.scanCode",
+    "onCommand:ai.generateDocs",
+    "onCommand:ai.publishArticle"
+  ],
+  "main": "./out/extension.js",
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "dependencies": {
+    "openai": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.60.0",
+    "typescript": "^4.4.3",
+    "vscode": "^1.1.37"
+  },
+  "contributes": {
+    "commands": [
+      {
+        "command": "ai.generateTask",
+        "title": "AI: 生成代码/测试/文档"
+      },
+      {
+        "command": "ai.scanCode",
+        "title": "AI: 扫描并质量提醒"
+      },
+      {
+        "command": "ai.generateDocs",
+        "title": "AI: 自动生成报告"
+      },
+      {
+        "command": "ai.publishArticle",
+        "title": "AI: 发布公众号文章"
+      }
+    ]
+  }
+}

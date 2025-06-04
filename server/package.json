@@ -1,0 +1,25 @@
+{
+  "name": "content-automation-server",
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "ts-node-dev src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^7.0.4",
+    "node-schedule": "^2.1.0",
+    "openai": "^4.0.0",
+    "dotenv": "^16.0.3",
+    "cors": "^2.8.5",
+    "body-parser": "^1.20.2"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.4",
+    "ts-node-dev": "^2.0.0",
+    "@types/express": "^4.17.17",
+    "@types/node": "^18.15.11"
+  }
+}
